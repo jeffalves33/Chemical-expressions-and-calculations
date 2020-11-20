@@ -7,7 +7,7 @@ def option4(option):
 
     if(option == 1):
         while(1):
-            print(':::::NUMERO DE ATOMOS:::::')
+            print(':::::TEMPODE DE MEIA-VIDA:::::')
             print('1 - continuar')
             print('2 - sair')
             answer = int(input('=> '))
