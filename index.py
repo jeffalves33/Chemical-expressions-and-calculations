@@ -40,13 +40,13 @@ def main2(option):
             option3(option)
             continue
         if(answer == 4):
-            option4(option)
+            #option4(option)
             continue
         if(answer == 5):
-            option5(option)
+            #option5(option)
             continue
         if(answer == 6):
-            main()
+            #main()
             break
         if(answer == 7):
             exit()
