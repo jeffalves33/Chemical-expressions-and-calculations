@@ -54,26 +54,6 @@ def main2(option):
 
 
 
-    
-    
-
-
-
-
-
-
-def archive():
-    with open('abc.txt', 'r') as f:
-        primeira_linha = f.readline()
-        
-    a = int(primeira_linha)
-    print(a)
-
-
-
-
-
-
 main()
 
 #teste

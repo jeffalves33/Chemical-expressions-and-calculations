@@ -6,8 +6,7 @@ def option5(option):
     answer = 0
 
     #se for excolhido entrar com dados de usuário
-    if(option == 2
-    ):
+    if(option == 2):
         while(1):
             print(':::::ENERGIA LIVRE DE GIBBS:::::')
             print('1 - continuar')
@@ -28,10 +27,10 @@ def option5(option):
         deltaH = float(file.readline())
         deltaS = float(file.readline())
         temperatura = float(file.readline())
-        resultado = 0
         resultado = auxOption5(deltaH, deltaS, temperatura)
         lines = file.readlines()
         file.close()
+
         lines.insert(4, resultado)
 
         file = open('saida.txt', 'w')

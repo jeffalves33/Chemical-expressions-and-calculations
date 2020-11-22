@@ -15,11 +15,26 @@ def option4(option):
             if(answer == 2):
                 break
             valueK = float(input('Informe K: '))
-            auxOption4(valueK)
+            resultado = auxOption4(valueK)
+            print('tempo de meia-vida: ' + str(resultado) + '\n')
+
+    #caso for escolhido o uso de arquivo
+    else:
+        file = open('entrada.txt', 'r')
+        valueK = float(file.readline())
+        resultado = auxOption4(valueK)
+        lines = file.readlines()
+        file.close()
+
+        lines.insert(4, resultado)
+
+        file = open('saida.txt', 'w')
+        file.writelines(lines)
+        file.close()
 
 def auxOption4(valueK):
     log2 = 0.69314718
     halfLife = str(round(log2/valueK,8))
-    print('tempo de meia-vida: ' + halfLife + '\n')
+    return halfLife
 
 option4(1)
