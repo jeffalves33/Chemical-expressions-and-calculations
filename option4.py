@@ -5,7 +5,7 @@ import os
 def option4(option):
     answer = 0
 
-    if(option == 1):
+    if(option == 2):
         while(1):
             print(':::::TEMPODE DE MEIA-VIDA:::::')
             print('1 - continuar')

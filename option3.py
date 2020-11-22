@@ -4,7 +4,7 @@ import os
 def option3(option):
     answer = 0
 
-    if(option == 1):
+    if(option == 2):
         while(1):
             print(':::::QUANTIDADE DE UM GÁS PRODUZIDO:::::')
             print('1 - continuar')
@@ -16,14 +16,30 @@ def option3(option):
             pressao = float(input('Pressao: '))
             volume = float(input('Volume: '))
             temperatura = float(input('Temperatura: '))
-            auxOption3(pressao, volume, temperatura)
+            resultado = auxOption3(pressao, volume, temperatura)
+            print('concentração molar: '  + str(resultado) + '\n')
+    
+    #caso for escolhido o uso de arquivo
+    else:
+        file = open('entrada.txt', 'r')
+        pressao = float(file.readline())
+        volume = float(file.readline())
+        temperatura = float(file.readline())
+        resultado = auxOption3(pressao, volume, temperatura)
+        lines = file.readlines()
+        file.close()
+
+        lines.insert(4, resultado)
+
+        file = open('saida.txt', 'w')
+        file.writelines(lines)
+        file.close()
+
 
 def auxOption3(pressao, volume, temperatura):
     divisor = (0.082 * temperatura)
     expressao = pressao * volume
-    print(divisor)
-    print(expressao)
-    num_mols = round(expressao/divisor, 4)
-    print('concentração molar: '  + str(num_mols) + '\n')
+    num_mols = str(round(expressao/divisor, 4))
+    return num_mols
 
 option3(1)
