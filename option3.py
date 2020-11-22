@@ -4,7 +4,7 @@ import os
 def option3(option):
     answer = 0
 
-    if(option == 2):
+    if(option == 1):
         while(1):
             print(':::::QUANTIDADE DE UM GÁS PRODUZIDO:::::')
             print('1 - continuar')
